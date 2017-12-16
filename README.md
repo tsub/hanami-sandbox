@@ -4,6 +4,19 @@ Welcome to your new Hanami project!
 
 ## Setup
 
+How to setup application:
+
+```
+% bundle install
+% docker-compose up -d
+```
+
+How to run sidekiq:
+
+```
+% bundle exec sidekiq -d -e development -r ./config/environment.rb
+```
+
 How to run tests:
 
 ```
