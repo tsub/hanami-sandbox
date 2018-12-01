@@ -173,10 +173,11 @@ DEPENDENCIES
   minitest
   pry
   pry-byebug
+  rack
   rake
   shotgun
   sidekiq (~> 5.0)
   sqlite3
 
 BUNDLED WITH
-   1.16.0
+   1.17.1

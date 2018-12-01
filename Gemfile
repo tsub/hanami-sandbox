@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-gem 'hanami',       '~> 1.1'
+gem 'hanami', '~> 1.1'
 gem 'hanami-model', '~> 1.1'
+gem 'rack'
+gem 'rake'
 
 gem 'sidekiq', '~> 5.0'
 gem 'sqlite3'
@@ -20,8 +21,8 @@ group :test, :development do
 end
 
 group :test do
-  gem 'minitest'
   gem 'capybara'
+  gem 'minitest'
 end
 
 group :production do
