@@ -8,7 +8,12 @@ provider:
 functions:
   hanami:
     handler: lambda.handler
+    environment:
+      DATABASE_URL: "sqlite://db/bookshelf_development.sqlite"
     events:
       - http:
           path: /
+          method: any
+      - http:
+          path: "{proxy+}"
           method: any

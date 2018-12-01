@@ -42,6 +42,8 @@ def handler(event:, context:)
     # https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html
     response = {
       'statusCode' => status,
+      # 'statusDescription' => '200 OK',
+      # 'isBase64Encoded' => false,
       'headers' => headers,
       'body' => body_content
     }
