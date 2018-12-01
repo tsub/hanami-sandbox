@@ -7,8 +7,8 @@ RUN apk update --no-cache && \
     apk add --virtual build-dependencies \
         build-base && \
     apk add \
-        sqlite \
-        sqlite-dev && \
+        mysql-client \
+        mariadb-dev && \
     bundle install --jobs 4 && \
     apk del --purge build-dependencies
 

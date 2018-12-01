@@ -6,18 +6,22 @@ services:
     command: hanami server --host 0.0.0.0
     environment:
       REDIS_URL: "redis://redis:6379/0"
+      DATABASE_URL: "mysql2://db/bookshelf_development"
     image: tsub/hanami-sandbox
     ports:
       - 2300:2300
     volumes:
       - gems:/usr/local/bundle
       - .:/app
+    depends_on:
+      - db
 
   worker:
     <<: *app
     command: sidekiq --environment development --require ./config/environment.rb
     ports: []
     depends_on:
+      - db
       - redis
 
   redis:
@@ -27,6 +31,17 @@ services:
     volumes:
       - redis_data:/data
 
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: bookshelf_development
+    ports:
+      - 3306:3306
+    volumes:
+      - mysql_data:/var/lib/mysql
+
 volumes:
   gems:
+  mysql_data:
   redis_data:

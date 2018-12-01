@@ -4,9 +4,8 @@ gem 'hanami', '~> 1.1'
 gem 'hanami-model', '~> 1.1'
 gem 'rack'
 gem 'rake'
-
 gem 'sidekiq', '~> 5.0'
-gem 'sqlite3'
+gem 'mysql2'
 
 group :development do
   # Code reloading
