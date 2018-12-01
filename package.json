@@ -1,0 +1,23 @@
+{
+  "name": "hanami-sandbox",
+  "version": "1.0.0",
+  "description": "Welcome to your new Hanami project!",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tsub/hanami-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsub/hanami-sandbox/issues"
+  },
+  "homepage": "https://github.com/tsub/hanami-sandbox#readme"
+}
