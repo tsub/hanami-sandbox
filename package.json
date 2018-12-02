@@ -7,7 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "deploy": "rm -rf vendor/bundle && bundle install --deployment --without test development && sls deploy"
+    "deploy": "sls deploy"
   },
   "repository": {
     "type": "git",
